@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <!-- Bài 1 -->
+    <div class="container">
+        <div class="row">
+            <div class="col sm-4 mx-auto">
+                <div class="card">
+                    <div class="card-header text-center bg-danger">Tính tổng điểm</div>
+                    <div class="card_body">
+                        <div class="form_group">
+                            <label for="">Điểm chuẩn</label>
+                            <input id="chuan" type="text">
+                        </div>
+                        <div class="form_group">
+                            <div class="row">
+                                <div class="col-4 mx-auto"><label for="">Điểm môn 1</label> <input id="diem1" type="text">
+                                </div>
+                                <div class="col-4 mx-auto"><label for="">Điểm môn 2</label> <input id="diem2" type="text">
+                                </div>
+                                <div class="col-4 mx-auto"><label for="">Điểm môn 3</label> <input id="diem3" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="">Điểm khu vực</label>
+                            <select name="" id="region">
+                                <option value="A">Khu vực A</option>
+                                <option value="B">Khu vực B</option>
+                                <option value="C">Khu Vực C</option>
+                                <option value="X">Không</option>
+                            </select>
+                            <label for="">Điểm cộng</label>
+                            <select name="" id="plus">
+                                <option value="1">Loại 1</option>
+                                <option value="2">Loại 2</option>
+                                <option value="3">Loại 3</option>
+                                <option value="0">Không</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <button class="text-center" id="play">Tính</button>
+                        </div>
+                        <div style="display: none;" id="result-wrapper">
+                            <p>kết quả:</p>
+                            <p id="result"></p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+
+    <!-- Bài 2 -->
+    <h3>Bài 2</h3>
+    <div class="row">
+        <div class="col mx-auto">
+            <div class="card">
+                <div class="form_group">
+                    <label id="ten" for="">Tên</label>
+                    <input type="text">
+                </div>
+                <div class="form_group">
+                    <label  for="">Số KW</label>
+                    <input id="used" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="button">Tính</button>
+    <div id="result-w" style="display: none;">
+     <p>Số tiền cần trả</p>
+     <p id="show"></p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
