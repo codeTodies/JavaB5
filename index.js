@@ -81,3 +81,48 @@ document.getElementById("button").onclick=function(){
     document.getElementById("result-w").style.display="block";
     document.getElementById("show").innerHTML= tong + " vnd";
 }
+
+//Bài 3
+document.getElementById("On").onclick=function()
+{
+    let name=document.getElementById("name").value;
+    let profit=+document.getElementById("profit").value;
+    let depend=+document.getElementById("depend").value;
+    let amount=+ profit - 4 - (depend*1.6);
+    let final=+0;
+    if(amount<=60)
+    {
+      final=amount*(5/100);
+    }
+    else if(amount>60 && amount<=120)
+    {
+      final=(60*(5/100))+((amount-60)*(10/100));
+    }
+    else if(amount>120 && amount<=210)
+    {
+      final=(60*(5/100))+(60*(10/100))+((amount-120)*(15/100));
+    }
+    else if(amount>210 && amount<=384)
+    {
+      final=(60*(5/100))+(60*(10/100))+(90*(15/100))+((amount-210)*(20/100));
+    }
+    else if(amount>384 && amount<=624)
+    {
+      final=(60*(5/100))+(60*(10/100))+(90*(15/100))+(174*(20/100))+((amount-384)*(25/100));
+    }
+    else if(amount>624 && amount<=960)
+    {
+      final=(60*(5/100))+(60*(10/100))+(90*(15/100))+(174*(20/100))+(240*(25/100))+((amount-624)*(30/100));
+    }
+    else if(amount>960)
+    {
+      final=(60*(5/100))+(60*(10/100))+(90*(15/100))+(174*(20/100))+(240*(25/100))+(336*(30/100))+((amount-960)*(35/100));
+    }
+    document.getElementById("result-wr").style.display="block";
+    document.getElementById("magic").innerHTML= final +  " triệu vnd"
+    console.log(final);
+}
+
+
+
+//Bài 4
