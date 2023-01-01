@@ -118,15 +118,47 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="form_group"></div>
-                <div class="form_group"></div>
-                <div class="form_group"></div>
-                <div class="form_group"></div>
+                <div class="form_group">
+                    <label for="">Mã khách hàng</label>
+                    <input id="code" type="text">
+                </div>
+                <div class="form_group">
+                    <label for="">Loại khách hàng</label>
+                    <select name="" id="Type" onchange="myFunction()">
+                        <option value="B">Doanh nghiệp</option>
+                        <option value="A">Cá nhân</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="" >Số kết nối</label>
+                    <input id="connect" type="text">
+                </div>
+                <div class="form_group">
+                    <label for="">Số kênh cao cấp</label>
+                    <input id="premium" type="text">
+                </div>
             </div>
         </div>
     </div>
+    <button id="choose" class="btn btn-success" >Tính</button>
+    <div id="result-wrap" style="display: none;">
+        <p>Số tiền cần thanh toán</p>
+        <p id="boom"></p>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        function myFunction() {
+            let x = document.getElementById("Type").value;
+            if(x=="A")
+            {
+                document.getElementById("connect").disabled = true;
+            }
+           if (x == "B") {
+                document.getElementById("connect").disabled = false;
+            }
+        }
+    </script>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
