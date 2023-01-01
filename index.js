@@ -123,6 +123,34 @@ document.getElementById("On").onclick=function()
     console.log(final);
 }
 
-
-
+ 
 //Bài 4
+document.getElementById("choose").onclick
+=function(){
+  let code=document.getElementById("code").value;
+ let type=document.getElementById("Type").value;
+ let connect=+document.getElementById("connect").value;
+ let premium=+document.getElementById("premium").value;
+ let tong=+0;
+ let connectFee=+0;
+ if(type=="B")
+ {
+   if(connect<=10)
+   {
+    connectFee=connect*7.5;
+   }
+   else
+   {
+    connectFee=75 + (connect-10)*5;
+   }
+   tong=15+connectFee+(premium*50);
+ }
+
+ if(type=="A")
+ {
+  tong=4.5+20.5+(premium*7.5);
+ }
+ 
+document.getElementById("result-wrap").style.display="block";
+document.getElementById("boom").innerHTML=tong + " $"
+  }
